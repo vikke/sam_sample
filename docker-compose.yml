@@ -12,6 +12,9 @@ services:
     apl:
         build: ./apl
         restart: unless-stopped
+        environment:
+            APL_PATH: ${PWD}/../sam_sample
+            DEP: /sam-app
         volumes:
             - ./sam-app:/go/sam-app
         working_dir: /go/sam-app
