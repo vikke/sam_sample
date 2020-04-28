@@ -1,7 +1,6 @@
+cd /go/sam-app
 
-echo "==========================================="
-sleep 100000
+sleep 10000
 
-# sam local start-api
-
+sam local start-api --docker-volume-basedir "/go/sam-app" --host 0.0.0.0
 
